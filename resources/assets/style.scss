@@ -1,0 +1,133 @@
+* {
+    width: 1440px;
+    margin: 0;
+    padding: 0;
+}
+
+// HEADER ------------------------------------------------
+header {
+
+    background-image: url(images/photos/image-header.jpg);
+    width: auto;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    width: auto;
+    // display: flex;
+    // flex-direction: row;
+
+    .a {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: flex-end;
+        align-content: space-between;
+    }
+
+}
+
+.menu {
+display: flex;  
+justify-content: space-between;
+
+    &__btn {
+        width: 170px;
+        height: 33px;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: flex-end;
+        align-content: space-between;
+        
+
+    }
+
+    &___link {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: flex-end;
+        align-content: space-between;
+        &__link__spe {}
+    }
+
+    
+
+}
+
+.title {
+    color: black;
+}
+
+
+
+// MAIN ------------------------------------------------
+// .line1 {
+
+//     &__transform {
+//         &__title {}
+
+//         &__about {}
+
+//         &__learn {}
+//     }
+
+//     &__photo {}
+
+
+// }
+
+
+// .line2 {
+//     &__photo {}
+
+//     &__stand-out {
+//         &__title {}
+
+//         &__about {}
+
+//         &__learn {}
+//     }
+// }
+
+
+// .line3 {
+//     &__cherry {
+//         &__tool {}
+
+//         &__explenation {}
+//     }
+
+//     &__orange {
+//         &__tool {}
+
+//         &__explenation {}
+
+//     }
+
+// }
+
+// .testimanials {
+//     &__bubble {}
+
+//     &__info {}
+
+//     &__name {}
+
+//     &__job {}
+
+// }
+
+// .exemple {
+//     &__1 {}
+
+//     &__2 {}
+
+//     &__3 {}
+
+//     &__4 {}
+// }
+
+
+// FOOTER --------------------------------
