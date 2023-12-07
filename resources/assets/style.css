@@ -18,14 +18,23 @@ body {
 }
 
 ul {
+<<<<<<< HEAD
   max-width: 100%;
   font-family: "Barlow", sans-serif;
+=======
+  font-family: "Barlow", sans-serif;
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+>>>>>>> dev
   cursor: pointer;
   list-style: none;
   display: flex;
   align-items: center;
   gap: 100px;
+<<<<<<< HEAD
   position: fixed;
+=======
+>>>>>>> dev
 }
 
 h1 {
@@ -67,7 +76,11 @@ a {
 }
 .container__menu {
   display: flex;
+<<<<<<< HEAD
   align-items: flex-end;
+=======
+  align-items: center;
+>>>>>>> dev
   justify-content: space-between;
 }
 .container__menu__hamburger {
@@ -79,7 +92,11 @@ a {
 .container__menu__link__btn {
   margin-right: 0;
   padding: 12.5px 18px;
+<<<<<<< HEAD
   color: hsl(212, 27%, 19%);
+=======
+  color: hsl(210, 4%, 67%);
+>>>>>>> dev
   background: hsl(0, 0%, 100%);
   border-radius: 36px;
   text-transform: uppercase;
@@ -89,7 +106,11 @@ a {
 }
 .container__menu__link__btn a:hover {
   margin-right: 0;
+<<<<<<< HEAD
   background: hsl(232, 10%, 55%);
+=======
+  background: hsl(210, 4%, 67%);
+>>>>>>> dev
   color: hsl(0, 0%, 100%);
   border-radius: 36px;
   padding: 12.5px 18px;
@@ -218,6 +239,7 @@ picture {
   flex-direction: row;
   justify-content: flex-start;
   align-content: flex-end;
+<<<<<<< HEAD
 }
 .service__bloc {
   margin-bottom: 75px;
@@ -244,4 +266,86 @@ picture {
   display: flex;
   align-content: flex-end;
   font-size: 14.5px;
+=======
+}
+.service:nth-child(2) {
+  background-image: url(images/photos/image-photography.jpg);
+  background-position: right;
+  background-size: cover;
+}
+.service__bloc {
+  margin-bottom: 75px;
+}
+.service__bloc__txt {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-content: flex-end;
+}
+.service__bloc__titre {
+  font-size: 27px;
+  color: hsl(198, 62%, 26%);
+  margin-bottom: 18px;
+  font-family: "Fraunces", serif;
+}
+.service__bloc__detail {
+  color: hsl(167, 40%, 24%);
+  font-family: "Barlow", sans-serif;
+  display: flex;
+  align-content: flex-end;
+  font-size: 14.5px;
+}
+
+.client {
+  text-transform: uppercase;
+  font-weight: 900;
+  color: hsl(210, 4%, 67%);
+  margin-bottom: 54px;
+  letter-spacing: 5.5px;
+  font-family: "Fraunces", serif;
+}
+
+h4 {
+  font-weight: 900;
+  font-size: 20px;
+  margin-bottom: 9px;
+  font-family: "Fraunces", serif;
+}
+
+.testimonials {
+  padding: 108px;
+  text-align: center;
+  background: hsla(42, 92%, 90%, 0.192);
+}
+.testimonials__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-basis: 31%;
+}
+.testimonials__col {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+.testimonials__col__img {
+  border-radius: 50%;
+  width: 63px;
+  margin-bottom: 45px;
+}
+.testimonials__col__explain {
+  color: hsl(198, 62%, 26%);
+  margin-bottom: 45px;
+  line-height: 1.6;
+  font-family: "Barlow", sans-serif;
+}
+.testimonials__col__name {
+  font-size: 14.5px;
+  margin-bottom: 0;
+  font-family: "Barlow", sans-serif;
+>>>>>>> dev
 }/*# sourceMappingURL=style.css.map */
