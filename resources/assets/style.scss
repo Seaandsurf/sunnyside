@@ -32,60 +32,70 @@ $White: hsl(0, 0%, 100%);
 
 // MIXIN SCREEN--------------------------------------
 
+
+// WIDTH-------------------------------------------
+
 @mixin mediamaxwidth($max) {
-    @media screen and (max-width:$max) {
+    @media screen and (max-width:1440px) {
         @content;
     }
 }
 
 @mixin mediaminwidth($min) {
-    @media screen and (min-width:$min) {
+    @media screen and (min-width:376px) {
         @content;
     }
 }
 
-@mixin mediamaxheight($max) {
-    @media screen and (max-height:$max) {
-        @content;
-    }
-}
+// HEIGHT----------------------------------
 
-@mixin mediaminheight($min) {
-    @media screen and (min-height:$min) {
-        @content;
-    }
-}
+// @mixin mediamaxheight($max) {
+//     @media screen and (max-height:$max) {
+//         @content;
+//     }
+// }
+
+// @mixin mediaminheight($min) {
+//     @media screen and (min-height:$min) {
+//         @content;
+//     }
+// }
 
 // MIXIN STYLE -----------------------------------------------
 
 
-  // Styles généraux
-  @mixin reset-list() {
+// Styles généraux
+@mixin reset-list() {
     list-style: none;
     margin: 0;
     padding: 0;
-  }
-  
-  // pour le texte de lien
-  @mixin link-styles() {
+}
+
+// pour le texte de lien
+@mixin link-styles($background-color) {
     text-decoration: none;
     color: $Verydarkdesaturatedblue;
-  
+
     &:hover {
-      background-color: $Yellow;
-      color: $White;
+        color: $White;
+        bottom: 5.5px;
+        left: 0;
+        width: 100%;
+        height: 12.5px;
+        z-index: -1;
+        border-radius: 9px;
     }
-  }
-  
-  // pour les sections
-  @mixin section-styles() {
+}
+
+// pour les sections
+@mixin section-styles() {
     display: flex;
     flex-wrap: wrap;
-  }
-  
-  // pour les blocs de contenu
-  @mixin content-block-styles($background, $position, $size) {
-    background-image: url(images/photos/image-graphic-design.jpg);
+}
+
+// pour les blocs de contenu
+@mixin content-block-styles($background, $position, $size) {
+    background-image: url();
     background-position: $position;
     background-size: $size;
     background-repeat: no-repeat;
@@ -94,7 +104,7 @@ $White: hsl(0, 0%, 100%);
     flex-direction: row;
     justify-content: flex-start;
     align-content: flex-end;
-  }
+}
 
 
 * {
@@ -107,18 +117,26 @@ $White: hsl(0, 0%, 100%);
 
 html,
 body {
+    max-width: 1440px;
+    width: 100%;
     overflow-x: hidden;
 }
 
 ul {
+    max-width: 100%;
     font-family: 'Barlow', sans-serif;
-    color: $White;
-    text-decoration: none;
+    // color: $White;
+    // text-decoration: none;
     cursor: pointer;
     list-style: none;
     display: flex;
     align-items: center;
+    gap: 100px;
+    // position: right;
+    position: fixed;
 }
+
+
 
 h1 {
     font-family: 'Fraunces', serif;
@@ -167,8 +185,9 @@ a {
     position: relative;
 
     &__menu {
+        // position: fixed;
         display: flex;
-        align-items: center;
+        align-items:flex-end;
         justify-content: space-between;
 
         &__hamburger {
@@ -176,8 +195,10 @@ a {
         }
 
         &__link {
-            @include link-styles();
+            // @include link-styles();
             margin: 0 21px;
+
+
 
             &__btn {
                 margin-right: 0;
@@ -227,6 +248,7 @@ picture {
 // 1ERE ET 2EME LIGNE (4 BLOCS)-------------------------------------
 .feature {
     @include section-styles();
+
     &__content {
         color: $Verydarkdesaturatedblue;
         flex-basis: 50%;
@@ -257,15 +279,17 @@ picture {
         }
 
         &__link {
-            &:hover {
-                background-color: $Yellow;
-                bottom: .3rem;
-                left: 0;
-                width: 100%;
-                height: .7rem;
-                z-index: -1;
-                border-radius: .5rem;
-            }
+            @include link-styles($Yellow);
+
+            // &:hover {
+            //     background-color: $Yellow;
+            //     bottom: 5.5px;
+            //     left: 0;
+            //     width: 100%;
+            //     height: 12.5px;
+            //     z-index: -1;
+            //     border-radius: 9px;
+            // }
 
             text-decoration: none;
             color: $Verydarkdesaturatedblue;
@@ -275,18 +299,24 @@ picture {
             position: relative;
             cursor: pointer;
             font-family: 'Fraunces',
-            serif;
+                serif;
 
             &::before {
                 content: "";
                 position: absolute;
-                bottom: .3rem;
+                bottom: 5.5px;
+
+
                 left: 0;
                 width: 100%;
-                height: .7rem;
+                height: 12.5px;
+
+
                 background: hsla(51, 100%, 49%, 0.404);
                 z-index: -1;
-                border-radius: .5rem;
+                border-radius: 9px;
+
+
                 transition: .35s;
 
                 // :hover {
@@ -297,26 +327,26 @@ picture {
         }
 
         &__link2 {
-            &:hover {
-                background-color: $Softred;
-                bottom: .3rem;
-                left: 0;
-                width: 100%;
-                height: .7rem;
-                z-index: -1;
-                border-radius: .5rem;
-            }
+            @include link-styles($Softred);
+
+            &:hover {}
 
             &::before {
                 content: "";
                 position: absolute;
-                bottom: .3rem;
+                bottom: 5.5px;
+
+
                 left: 0;
                 width: 100%;
-                height: .7rem;
+                height: 12.5px;
+
+
                 background: hsla(7, 99%, 70%, 0.493);
                 z-index: -1;
-                border-radius: .5rem;
+                border-radius: 9px;
+
+
                 transition: .35s;
 
             }
@@ -331,8 +361,10 @@ picture {
         height: 100%;
 
         &__img {
+            // max-height: 376px;
+            max-width: 1440px;
             width: 100%;
-            height: 100%;
+            // height: 100%;
         }
     }
 }
@@ -340,11 +372,12 @@ picture {
 // 3EME LIGNE (2 BLOCS) ---------------------------------
 
 .service {
+
     @include content-block-styles('images/photos/image-graphic-design.jpg', 'left', '50%');
 
 
     &:nth-child(2) {
-        @include content-block-styles('images/photos/image-photography.jpg', 'right', 'cover');
+        // @include content-block-styles('images/photos/image-photography.jpg', 'right', 'cover');
         // background-image: url(images/photos/image-photography.jpg);
         // background-position: right;
         // background-size: cover;
@@ -352,9 +385,13 @@ picture {
     }
 
     &__bloc {
+        margin-bottom: 75px;
+
 
 
         &__txt {
+            width: 100%;
+            height: 100%;
             margin-bottom: 30px;
             text-align: center;
             display: flex;
@@ -364,14 +401,20 @@ picture {
         }
 
         &__titre {
-            font-size: 1.5rem;
-            color: hsl(198, 62%, 26%);
-            margin-bottom: 1rem;
+            font-size: 27px;
+
+
+            color: $Darkblue;
+            margin-bottom: 18px;
+
+
             font-family: 'Fraunces', serif;
             // font-size: 30px;
             // color: hsl(167, 40%, 24%);
             // font-family: 'Fraunces', serif;
-            // bottom: 1.5rem;
+            // bottom: 27px;
+
+
             // left: 50%;
             // max-width: 45%;
 
@@ -382,7 +425,9 @@ picture {
             font-family: 'Barlow', sans-serif;
             display: flex;
             align-content: flex-end;
-            font-size: .8rem;
+            font-size: 14.5px;
+
+
 
 
         }
